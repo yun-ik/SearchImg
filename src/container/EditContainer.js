@@ -11,14 +11,12 @@ import EditView from '../view/EditView';
 @observer
 class SearchbarContainer extends Component {
 
-  onSetQuery(value) {
-    this.props.imgSearch.setQuery(value)
-    //console.log(this.props.imgSearch.query)
+  onSetQuery(query) {
+    this.props.imgSearch.setQuery(query)
   }
 
   onSetApi() {
     this.props.imgSearch.setApi()
-    console.log(this.props.imgSearch.documents)
   }
 
   render() {

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { TextField, Button, InputAdornment } from '@material-ui/core';
+import { TextField, Box, IconButton } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 
 import { observer } from 'mobx-react';
@@ -8,27 +8,28 @@ import { observer } from 'mobx-react';
 class EditView extends PureComponent {
     render() {
 
-        const {query, onSetQuery, onSetApi} = this.props;
+        const { query, onSetQuery, onSetApi } = this.props;
 
         return (
-            <form noValidate>
-                <TextField id="standard-basic" label="Search"
-                    variant="outlined" className="searchbar" value={query}
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment position="end">
-                                <SearchIcon />
-                            </InputAdornment>
-                        ),
-                    }}
-                    onChange={(event) => onSetQuery(event.target.value)}
-                >
-                </TextField>
-                <Button
-                    onClick={onSetApi}
-                    //onClick = {(event) => this.onSetApi(event)}
-                    variant="contained" color='primary'>검색</Button>
-            </form>
+            <Box className="searchBox">
+                    <TextField id="standard-basic" label="Search"
+                        variant="outlined" className="searchbar" value={query}
+                        size="small"
+                        classes={{ root: 'TextField' }}
+                        InputProps={{
+                            endAdornment: (
+                                <IconButton aria-label="search"
+                                    onClick={onSetApi}
+                                    color='primary'
+                                >
+                                    <SearchIcon />
+                                </IconButton>
+                            ),
+                        }}
+                        onChange={(event) => onSetQuery(event.target.value)}
+                    >
+                    </TextField>
+            </Box>
         )
     }
 }

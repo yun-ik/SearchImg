@@ -1,0 +1,34 @@
+.searchBox{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em;
+    margin-bottom: 2.3em;
+}
+
+.TextField{
+    width: 30rem;
+}
+
+.GridListImg:hover{
+    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.35), -2px -2px 3px 3px rgba(0, 0, 0, 0.35);
+}
+
+.GridListTitleWrap{
+    margin-top: 1.5em;
+    margin-left: 0.5em !important;
+}
+
+.GridListTitle{
+    background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%) !important;
+}
+
+.GridListTitle:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.pagecontainer{
+    display: flex !important;
+    justify-content: center;
+    margin: 1rem;
+}
