@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
 import { Container } from '@material-ui/core';
 
-import MainSearch from './container/MainSearch';
-import { Route, Switch } from 'react-router';
+import EditContainer from './container/EditContainer';
+import ImgListContainer from './container/ImgListContainer';
+import PageNationContainer from './container/PageNationContainer';
+
+// import MainSearch from './container/MainSearch';
+// import { Route, Switch } from 'react-router';
 
 import './css/imgListView.css';
+
 
 class App extends Component {
   render() {
     return (
       <Container>
-        {/* <EditContainer />
+        <EditContainer />
         <ImgListContainer/>
-        <PageNationContainer /> */}
-        <Switch>
+        <PageNationContainer />
+        {/* <Switch>
           <Route exact path='/' component={MainSearch}></Route>
           <Route path='/search' component={MainSearch}></Route>
           <Route component={() => <h2>Not Found!</h2>}></Route>
-        </Switch>
+        </Switch> */}
       </Container>
 
 
